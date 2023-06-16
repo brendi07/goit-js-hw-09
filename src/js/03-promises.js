@@ -6,23 +6,23 @@ form.addEventListener('submit', onSubmit)
 
 function onSubmit(event) {
   event.preventDefault();
-  let ms = form.delay.value;
-  ms = Number(ms);
+  let delay = form.delay.value;
+  delay = Number(delay);
   const step = form.step.value;
   
   const amount = form.amount.value;
-  console.log(ms)
+  console.log(delay)
 
   for ( let i = 1; i <= amount; i += 1) {
   
-    createPromise(i, ms)
+    createPromise(i, delay)
       .then(value => {
         Notify.success(value);
       })
       .catch(error => {
         Notify.failure(error);
       });
-    ms += step;
+    delay += step;
   }
 
 }
