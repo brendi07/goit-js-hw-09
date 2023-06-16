@@ -9,7 +9,7 @@ function onSubmit(event) {
   let ms = form.delay.value;
   ms = Number(ms);
   const step = form.step.value;
-  step = Number(step);
+  
   const amount = form.amount.value;
   console.log(ms)
 
