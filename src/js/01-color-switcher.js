@@ -3,6 +3,8 @@ const stop = document.querySelector('[data-stop]');
 const window = document.querySelector('body')
 let timerId = null;
 
+console.log(start.textContent)
+
 start.addEventListener('click', onStart);
 function onStart(event) {
    timerId = setInterval(() => {
